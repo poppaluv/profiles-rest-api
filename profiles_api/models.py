@@ -16,7 +16,7 @@ def create_user(self, email, name, password=None):
     user = self.model(email=email, name=name)
 
     user.set_password(password)
-    user.save(using=self.db)
+    user.save(using=self._db)
 
     return user
 
