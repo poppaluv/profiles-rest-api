@@ -13,7 +13,7 @@ def create_user(self, email, name, password=None):
         raise ValueError('User must have an email address')
 
     email = self.normailize_email(email)
-    user = self.mode(email=email, name=name)
+    user = self.model(email=email, name=name)
 
     user.set_password(password)
     user.save(using=self.db)
